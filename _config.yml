@@ -1,7 +1,7 @@
 # Site settings
 title: YunZS Blog
 SEOTitle: 雲中手的博客 | YunZS Blog
-header-img: img/post-bg-desk.jpg
+header-img: img/Tree.jpg
 email: g6067044@gmail.com
 description: "Every failure is leading towards success."
 keyword: "YUNZHS, YUNZHS Blog, 雲中手的博客, yunzhs, 耿奕伟, java, hadoop, scala"
@@ -11,7 +11,7 @@ github_repo: "https://github.com/yunzhs/yunzhs.github.io" # you code repository
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
-sidebar-about-description: "Goals determine what you going to be!"
+sidebar-about-description: "  Whatever you do will be insignificant, but it is very  &nbsp  important that you do it!"
 sidebar-avatar: /img/me.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
@@ -32,13 +32,13 @@ twitter_username:   FIOIFO
 permalink: pretty
 paginate: 10
 exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
-anchorjs: true                          # if you want to customize anchor. check out line:181 of `post.html`
+anchorjs: false                          # if you want to customize anchor. check out line:181 of `post.html`
 
 
 
 # Gems
 # from PR#40, to support local preview for Jekyll 3.0
-gems: [jekyll-paginate]
+plugins: [jekyll-paginate]
 
 
 
