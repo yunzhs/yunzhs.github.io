@@ -2,7 +2,7 @@
 layout:     post
 title:      报错在本地jekyll中,liquid warning
 subtitle:   
-date:       2017-12-13
+date:       2017-12-15
 author:     yunzhs
 header-img: img/tag-bg.jpg
 catalog: true
