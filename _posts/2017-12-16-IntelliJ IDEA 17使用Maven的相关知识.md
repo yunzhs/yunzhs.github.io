@@ -8,7 +8,7 @@ catalog: true
 tags:
     - maven
 typora-root-url: ..
-typora-copy-images-to: ..\img
+typora-copy-images-to: ..\img\posts
 ---
 
 [TOC]
@@ -21,27 +21,27 @@ typora-copy-images-to: ..\img
 
 ### 1.打开IDEA，创建新项目：
 
-![Snipaste_2017-12-16_11-04-35](/img/Snipaste_2017-12-16_11-04-35.png)
+![Snipaste_2017-12-16_11-04-35](/img/posts/Snipaste_2017-12-16_11-04-35.png)
 
 ### 2.然后选择Maven，以及选择自己电脑的jdk,并且不要选择create from archetype
 
-![Snipaste_2017-12-16_11-05-20](/img/Snipaste_2017-12-16_11-05-20-3395975050.png)
+![Snipaste_2017-12-16_11-05-20](/img/posts/Snipaste_2017-12-16_11-05-20-3395975050.png)
 
 ### 3.接下来自定义GroupId以及ArtifactId，这里只是demo，所以随便命名
 
-![Snipaste_2017-12-16_11-05-52](/img/Snipaste_2017-12-16_11-05-52.png)
+![Snipaste_2017-12-16_11-05-52](/img/posts/Snipaste_2017-12-16_11-05-52.png)
 
 ### 4.然后自定义项目名,创建完成
 
-![Snipaste_2017-12-16_11-06-02](/img/Snipaste_2017-12-16_11-06-02.png)
+![Snipaste_2017-12-16_11-06-02](/img/posts/Snipaste_2017-12-16_11-06-02.png)
 
 ### 5.创建完成后的目录结构和样式
 
-![Snipaste_2017-12-16_11-07-13](/img/Snipaste_2017-12-16_11-07-13.png)
+![Snipaste_2017-12-16_11-07-13](/img/posts/Snipaste_2017-12-16_11-07-13.png)
 
 ### 6.最后在setting中找到maven,设置本地maven工具的目录,并查看相应的本地仓库的位置
 
-![Snipaste_2017-12-16_11-12-10](/img/Snipaste_2017-12-16_11-12-10.png)
+![Snipaste_2017-12-16_11-12-10](/img/posts/Snipaste_2017-12-16_11-12-10.png)
 
 ## 二.eclipse上的会使用的常用maven插件
 
@@ -57,7 +57,7 @@ typora-copy-images-to: ..\img
 
 ​	這個功能是idea自帶環境可以直接實現的.
 
-![Snipaste_2017-12-16_17-27-57](/img/Snipaste_2017-12-16_17-27-57.png)
+![Snipaste_2017-12-16_17-27-57](/img/posts/Snipaste_2017-12-16_17-27-57.png)
 
 ### 3.maven-source-plugin
 
@@ -68,7 +68,7 @@ typora-copy-images-to: ..\img
 ## 三 .maven設置中的標籤的一些作用
 
 ### 1.依賴範圍<scope></scope>
-![Snipaste_2017-12-16_17-38-22](/img/Snipaste_2017-12-16_17-38-22.png)
+![Snipaste_2017-12-16_17-38-22](/img/posts/Snipaste_2017-12-16_17-38-22.png)
 
 servlet為什麼是provided?
 ​	因為在實際的環境中,打包過程中tomcat已經自帶這玩意兒了,再被打包的話會發生衝突.
@@ -91,7 +91,7 @@ servlet為什麼是provided?
 
 -  site：生成项目站点的
 
-   ![Snipaste_2017-12-16_21-16-06](C:\Users\hasee\Desktop\Snipaste_2017-12-16_21-16-06.png)
+   ![Snipaste_2017-12-16_21-16-06](/img/posts/Snipaste_2017-12-16_21-16-06.png)
 
    maven項目的運行需要在run configurations進行,在goal框中輸入相關的指令,不同指令間可以使用空格隔開
 

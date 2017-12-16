@@ -9,7 +9,7 @@ catalog: true
 tags:
     - 博客搭建相关
 typora-root-url: ..
-typora-copy-images-to: ..\img
+typora-copy-images-to: ..\img\posts
 ---
 
 ![12.5](/img/12.5.png)
