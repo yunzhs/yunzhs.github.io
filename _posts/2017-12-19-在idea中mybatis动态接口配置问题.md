@@ -19,7 +19,7 @@ typora-copy-images-to: ..\img\posts
 
 学习mybatis的过程中，测试mapper自动代理的时候一直出错，在eclipse中可以正常运行，而同样的代码在idea中却无法成功。虽然可以继续调试，但心里总是纠结原因。百度了好久，终于找到一个合适的原因。参考：<http://blog.csdn.net/z69183787/article/details/48933481>；
 
-DEA的maven项目中，默认源代码目录下的xml等资源文件并不会在编译的时候一块打包进classes文件夹，而是直接舍弃掉。
+IDEA的maven项目中，默认源代码目录下的xml等资源文件并不会在编译的时候一块打包进classes文件夹，而是直接舍弃掉。
 
 如果使用的是Eclipse，Eclipse的src目录下的xml等资源文件在编译的时候会自动打包进输出到classes文件夹。Hibernate和Spring有时会将配置文件放置在src目录下，编译后要一块打包进classes文件夹，所以存在着需要将xml等资源文件放置在源代码目录下的需求。
 
@@ -45,7 +45,7 @@ DEA的maven项目中，默认源代码目录下的xml等资源文件并不会在
       </plugin>
     </plugins>
 
-    <!--这里进行配置，后会自动的加载mapper.xml文件　:配置Maven 对resource文件 过滤 -->
+    <!--这里进行配置后会自动的加载mapper.xml文件　:配置Maven 对resource文件 过滤 -->
     <resources>
       <resource>
         <directory>src/main/resources</directory>

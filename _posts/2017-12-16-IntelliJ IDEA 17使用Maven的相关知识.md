@@ -43,6 +43,23 @@ typora-copy-images-to: ..\img\posts
 
 ![Snipaste_2017-12-16_11-12-10](/img/posts/Snipaste_2017-12-16_11-12-10.png)
 
+### 7.将MAVEN的默认jdk版本设置为1.8
+
+​	在pom.xml文件中配置:
+
+```
+<properties>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+</properties>
+```
+
+### 8.添加WEB配置
+
+选择框架支持,并添加web.application
+
+![Snipaste_2017-12-22_21-36-42](/img/posts/Snipaste_2017-12-22_21-36-42.png)
+
 ## 二.eclipse上的会使用的常用maven插件
 
 ### 1.maven-compiler-plugin
