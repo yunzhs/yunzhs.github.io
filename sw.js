@@ -3,7 +3,7 @@
  * ===========================================================
  * Copyright 2016 @huxpro
  * Licensed under Apache 2.0 
- * Register service worker.
+ * Register service worker. 
  * ========================================================== */
 
 const PRECACHE = 'precache-v1';
