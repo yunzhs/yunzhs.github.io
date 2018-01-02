@@ -1,0 +1,37 @@
+---
+layout:     post
+title:      在idea中导出项目的jar包
+subtitle:   
+date:       2018-1-2
+author:     yunzhs
+header-img: img/Dyanna the Luna.jpg
+catalog: true
+tags:
+    - linux
+typora-root-url: ..
+typora-copy-images-to: ..\img\posts
+---
+
+# Intellij Idea 将java项目打包成jar
+
+## 1.菜单：File->project stucture
+
+## 2.在弹窗最左侧选中Artifacts->"+",选jar，选择from modules with dependencies
+
+![1514896918056](/img/posts/1514896918056.png)
+
+然后会有配置窗口出现，并选择你项目的主类
+
+![1514896993713](/img/posts/1514896993713.png)
+
+勾选include in project build,就可以将项目所需的jar包依赖一块导出,相比eclipse还得专门配插件高了几个档次
+
+![1514897136882](/img/posts/1514897136882.png)
+
+##3.然后菜单：Build->build project
+
+## 4.最后在项目目录下去找输出的jar包（路径在你添加Artifacts的时候设置的路径）
+
+## 补充
+
+- 在更新项目后点build project可以重新生成jar包,并替换原文件

@@ -1,0 +1,80 @@
+---
+layout:     post
+title:      在CentOS6下安装jdk1.8
+subtitle:   
+date:       2018-1-2
+author:     yunzhs
+header-img: img/Dyanna the Luna.jpg
+catalog: true
+tags:
+    - linux
+typora-root-url: ..
+typora-copy-images-to: ..\img\posts
+---
+
+# 用yum安装JDK(CentOS)
+
+## 1.查看yum库中都有哪些jdk版本
+
+```
+[root@yunzhs02 g6067044]# yum search java|grep jdk
+ldapjdk-javadoc.x86_64 : Javadoc for ldapjdk
+java-1.6.0-openjdk.x86_64 : OpenJDK Runtime Environment
+java-1.6.0-openjdk-demo.x86_64 : OpenJDK Demos
+java-1.6.0-openjdk-devel.x86_64 : OpenJDK Development Environment
+java-1.6.0-openjdk-javadoc.x86_64 : OpenJDK API Documentation
+java-1.6.0-openjdk-src.x86_64 : OpenJDK Source Bundle
+java-1.7.0-openjdk.x86_64 : OpenJDK Runtime Environment
+java-1.7.0-openjdk-demo.x86_64 : OpenJDK Demos
+java-1.7.0-openjdk-devel.x86_64 : OpenJDK Development Environment
+java-1.7.0-openjdk-javadoc.noarch : OpenJDK API Documentation
+java-1.7.0-openjdk-src.x86_64 : OpenJDK Source Bundle
+java-1.8.0-openjdk.x86_64 : OpenJDK Runtime Environment
+java-1.8.0-openjdk-debug.x86_64 : OpenJDK Runtime Environment with full debug on
+java-1.8.0-openjdk-demo.x86_64 : OpenJDK Demos
+java-1.8.0-openjdk-demo-debug.x86_64 : OpenJDK Demos with full debug on
+java-1.8.0-openjdk-devel.x86_64 : OpenJDK Development Environment
+java-1.8.0-openjdk-devel-debug.x86_64 : OpenJDK Development Environment with
+java-1.8.0-openjdk-headless.x86_64 : OpenJDK Runtime Environment
+java-1.8.0-openjdk-headless-debug.x86_64 : OpenJDK Runtime Environment with full
+java-1.8.0-openjdk-javadoc.noarch : OpenJDK API Documentation
+java-1.8.0-openjdk-javadoc-debug.noarch : OpenJDK API Documentation for packages
+java-1.8.0-openjdk-src.x86_64 : OpenJDK Source Bundle
+java-1.8.0-openjdk-src-debug.x86_64 : OpenJDK Source Bundle for packages with
+ldapjdk.x86_64 : The Mozilla LDAP Java SDK
+rh-java-common-slf4j-jdk14.noarch : jdk14 module for slf4j
+```
+
+## 2.选择版本，进行安装
+
+我们这里安装1.8版本
+
+```
+yum install java-1.8.0-openjdk
+```
+
+## 3.**设置环境变量**
+
+```
+[root@localhost ~]# vi /etc/profile
+```
+
+添加如下内容：
+
+```
+#set java environment
+JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.151-1.b12.el6_9.x86_64
+JRE_HOME=$JAVA_HOME/jre
+CLASS_PATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar:$JRE_HOME/lib
+PATH=$PATH:$JAVA_HOME/bin:$JRE_HOME/bin
+export JAVA_HOME JRE_HOME CLASS_PATH PATH
+```
+
+让修改生效：
+
+```
+[root@localhost java]# source /etc/profile
+```
+
+## 完成
+

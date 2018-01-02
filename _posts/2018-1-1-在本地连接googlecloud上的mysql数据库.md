@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      在本地连接googlecloud上的mysql数据库
+title:      Windows本地连接googlecloud上的mysql数据库
 subtitle:   
 date:       2018-1-1
 author:     yunzhs
