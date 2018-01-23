@@ -60,13 +60,60 @@ typora-copy-images-to: ..\img\posts
 
 ![Snipaste_2017-12-22_21-36-42](/img/posts/Snipaste_2017-12-22_21-36-42.png)
 
+### 9.处理java版本过期问题
+
+- Check java version in your **pom.xml**([here](https://stackoverflow.com/questions/16723533/modify-pom-xml-to-include-jdk-compiler-version) you can find how to do it). Also check java version in **Project Structure**. And the last what you can do - check compiler version e.g.
+
+![enter image description here](https://i.stack.imgur.com/itRLK.jpg)
+
+
+
+- I did all of the above and still had one instance of the warning:
+
+  ```
+  Warning:java: source value 1.5 is obsolete and will be removed in a future release
+  ```
+
+  I went into my **project_name.iml** file and replaced the following tag:
+
+  ```
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_5" inherit-compiler-output="false">
+  ```
+
+  with:
+
+  ```
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8" inherit-compiler-output="false">
+  ```
+
+  And voila, no more error message. Hope this helps someone.
+
+- 最后感觉还是直接在里面导入插件比较实用
+
+  ​
+
+
+
 ## 二.eclipse上的会使用的常用maven插件
 
-### 1.maven-compiler-plugin
+### 1.maven-compiler-plugin插件
 
 ​	因为在eclipse上创建maven项目,会自动给项目分配一个jdk1.5,所以需要这个插件来给maven项目制定一个jdk版本.
 
-​	而idea在创建maven项目前,会让你选择要用哪一个的java版本,故不需要导入这个插件.
+​	~~而idea在创建maven项目前,会让你选择要用哪一个的java版本,故不需要导入这个插件.~~
+
+```
+<plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-compiler-plugin</artifactId>
+    <version>3.1</version>
+    <configuration>
+        <source>1.8</source>
+        <target>1.8</target>
+        <encoding>utf-8</encoding>
+    </configuration>
+</plugin>
+```
 
 ### 2.tomcat7-maven-plugin
 
@@ -132,4 +179,16 @@ servlet為什麼是provided?
 - 最后，尝试刷新maven工程，看是否可以成功。
 
 
+## 六.解决导入pom文件后SLF4J和log4j报错的问题
 
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+
+造成原因是SLF4J log4j版本不匹配
+
+首先看看你工程中的sl4j-api的版本（比如我的是1.5.11），然后在<http://mvnrepository.com/>搜索slf4j-log4j12，会出现SLF4J LOG4J 12 Binding，点击进入，会有很多版本的slf4j-log4j12，我们点击1.5.11版本的slf4j-log4j12进入详细信息页面，查看依赖的log4j，这个版本的slf4j-log4j12依赖的是1.2.14版本的log4j。
+
+所以，**我们在我们的工程中添加1.5.11版本的slf4j-log4j12和1.2.14版本的log4j，问题完美解决。**
+
+**另外把slf4j-log4j12中的test去掉才行**
