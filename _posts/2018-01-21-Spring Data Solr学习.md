@@ -147,5 +147,40 @@ HighlightPage<TbItem> queryForHighlightPage = solrTemplate.queryForHighlightPage
 
 ### 2.添加过滤
 
+```
+FilterQuery filterQuery = new SimpleFilterQuery();
+Criteria filterCriteria = new Criteria("item_category").is(searchMap.get("category"));
+filterQuery.addCriteria(filterCriteria );
+query.addFilterQuery(filterQuery );
+```
 
+上述代码表示添加了一个指定字段item_category为category的过滤,只有符合条件的才能被查询到
+
+```
+Criteria filterCriteria=new Criteria("item_price").greaterThanEqual(price[0]);
+FilterQuery filterQuery=new SimpleFilterQuery(filterCriteria);
+query.addFilterQuery(filterQuery);	
+```
+
+```
+Criteria filterCriteria=new  Criteria("item_price").lessThanEqual(price[1]);
+FilterQuery filterQuery=new SimpleFilterQuery(filterCriteria);
+query.addFilterQuery(filterQuery);	
+```
+
+实现一个取大于price[0]和小于price[1]之间数
+
+### 3.设置每页显示的数据数量和从哪条数据开始查询
+
+==**这个设置主要用来做分页**==
+
+```
+ query.setOffset((pageNo-1)*pageSize);//从第几条记录查询
+ query.setRows(pageSize);每页显示的数据数量
+```
+
+```
+Page.getTotalPages()  // 获取总页数
+Page.getTotalElements()	//获取总条数
+```
 

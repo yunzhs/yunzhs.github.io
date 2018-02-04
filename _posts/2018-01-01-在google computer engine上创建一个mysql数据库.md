@@ -165,7 +165,7 @@ mysql>GRANT ALL PRIVILEGES ON *.* TO root@'%' IDENTIFIED BY '123' WITH GRANT OPT
 
 ```
 
-其中123456换成你之前设置的数据库密码
+@后面为适用的主机,若是%则表示全部适用,123表示登陆密码
 
 #### 3、刷新授权
 

@@ -6,7 +6,8 @@ author:     yunzhs
 header-img: img/Archer.jpg
 catalog: true
 tags:
-    - Redis
+    - angularJS
+    - 前端
 typora-root-url: ..
 typora-copy-images-to: ..\img\posts
 ---
@@ -54,13 +55,15 @@ $location.path('/newValue')
 
 所有的setter方法都返回同一个`$location`对象，以便你进行链式调用。例如，要想一次性修改地址中的几个字段，可以用这样的语法把几个setter串起来：
 
+  **在AngularJS中,如果在controller中用location需要一个注入服务操作**
+
 ```
 $location.path('/newValue').search({key: value});
 ```
 
 ----
 
-在angularJS中,如果在controller和service等js环境范围内中写scope变量必须加scope,而在body中需要写{{变量名}},在ng的angularjs方法中则可以直接使用变量名在赋值
+在angularJS中,如果在controller和service等js环境范围内中写scope变量必须加scope,而在body中需要写{{variable}},在ng的angularjs方法中则可以直接使用变量名在赋值
 
 
 
@@ -76,5 +79,11 @@ app.filter('trustHtml',['$sce',function($sce){
 
 ```
 <div class="attr" ng-bind-html="item.title | trustHtml"></div>
+```
+
+复选框勾选进行赋值
+
+```
+<input type="checkbox"  ng-model="entity.goods.isEnableSpec" ng-true-value="1" ng-false-value="0">
 ```
 
