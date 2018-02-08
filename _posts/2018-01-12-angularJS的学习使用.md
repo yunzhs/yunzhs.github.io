@@ -87,3 +87,19 @@ app.filter('trustHtml',['$sce',function($sce){
 <input type="checkbox"  ng-model="entity.goods.isEnableSpec" ng-true-value="1" ng-false-value="0">
 ```
 
+#### $interval服务简介
+
+ 在AngularJS中$interval服务用来处理间歇性处理一些事情
+
+```
+ $interval(执行的函数,间隔的毫秒数,运行次数);
+```
+
+运行次数可以缺省，如果缺省则无限循环执行  
+
+取消执行用cancel方法
+
+```
+$interval.cancel(time);
+```
+

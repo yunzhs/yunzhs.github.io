@@ -8,6 +8,7 @@ author:     yunzhs
 header-img: img/Archer.jpg
 catalog: true
 tags:
+    - spring
     - Solr
 ---
 

@@ -46,7 +46,7 @@ Spring Boot 具有如下特性：
   <parent>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-parent</artifactId>
-<version>1.4.0.RELEASE</version>
+	<version>1.4.0.RELEASE</version>
   </parent>  
   <dependencies>
     <dependency>
