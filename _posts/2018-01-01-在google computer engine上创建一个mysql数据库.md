@@ -155,14 +155,12 @@ Mysql默认使用本机进行连接，如果需要远程连接，也需要进行
 
 ```
 $ mysql -u root -p
-
 ```
 
 #### 2、授权
 
 ```
 mysql>GRANT ALL PRIVILEGES ON *.* TO root@'%' IDENTIFIED BY '123' WITH GRANT OPTION;
-
 ```
 
 @后面为适用的主机,若是%则表示全部适用,123表示登陆密码
