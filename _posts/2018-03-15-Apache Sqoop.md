@@ -13,7 +13,7 @@ typora-copy-images-to: ..\img\posts
 
 ## 一.简介
 
-​	Sqoop 是 是 p Hadoop 和关系数据库服务器之间传送数据的一种工具。它是用来从关系数据库如：MySQL，
+​	Sqoop 是 Hadoop 和关系数据库服务器之间传送数据的一种工具。它是用来从关系数据库如：MySQL，
 
 Oracle 到 Hadoop 的 HDFS，并从 Hadoop 的文件系统导出数据到关系数据库。由 Apache 软件基金会提供。
 
