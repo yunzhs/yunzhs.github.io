@@ -52,7 +52,7 @@ emmmmmm,1M的小水管下了五分钟的jar包,下载完毕后,即创建成功
 
 从阿里云通信官网上下载Demo工程
 
-把 `aliyun-java-sdk-core`  `alicom-dysms-api` 安装到本地仓库
+把 `aliyun-java-sdk-core`  `alicom-dysms-api`  maven install 安装到本地仓库
 
 ```
 <dependencies>
