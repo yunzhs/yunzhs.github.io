@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      使用Akka实现一个简易版的spark通信架构
-date:       2018-3-30
+date:       2017-09-27
 author:     yunzhs
 header-img: img/Fate of Princess.jpg
 catalog: true

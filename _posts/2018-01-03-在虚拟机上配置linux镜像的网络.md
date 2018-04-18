@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      在虚拟机上配置linux镜像的网络
-date:       2018-1-3
+date:       2017-08-3
 author:     yunzhs
 header-img: img/Fate of Princess.jpg
 catalog: true

@@ -2,7 +2,7 @@
 layout:     post
 title:      在Windows上连接google computer engine
 subtitle:   
-date:       2018-1-1
+date:       2017-08-1
 author:     yunzhs
 header-img: img/Dyanna the Luna.jpg
 catalog: true

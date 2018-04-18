@@ -2,7 +2,7 @@
 layout:     post
 title:      Windows本地连接googlecloud上的mysql数据库
 subtitle:   
-date:       2018-1-1
+date:       2017-08-1
 author:     yunzhs
 header-img: img/Dyanna the Luna.jpg
 catalog: true

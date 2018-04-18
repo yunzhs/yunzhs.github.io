@@ -2,7 +2,7 @@
 layout:     post
 title:      Spring整合Redis
 subtitle:   
-date:       2018-2-5
+date:       2017-09-25
 author:     yunzhs
 header-img: img/SMILE.jpg
 catalog: true

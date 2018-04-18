@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      Spring Boot入门(整合一个ActiveMQ)
-date:       2018-1-27
+date:       2017-08-27
 author:     yunzhs
 header-img: img/Archer.jpg
 catalog: true

@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      IntelliJ IDEA 17和eclipse使用Maven的相关知识
-date:       2017-12-16
+date:       2017-06-16
 author:     yunzhs
 header-img: img/tag-bg.jpg
 catalog: true

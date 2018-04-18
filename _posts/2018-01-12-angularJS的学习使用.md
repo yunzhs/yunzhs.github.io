@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      angularJS的学习使用
-date:       2018-01-12
+date:       2017-08-12
 author:     yunzhs
 header-img: img/Archer.jpg
 catalog: true

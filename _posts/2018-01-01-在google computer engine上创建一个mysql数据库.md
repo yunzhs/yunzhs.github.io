@@ -2,7 +2,7 @@
 layout:     post
 title:      在google computer engine上创建一个mysql数据库
 subtitle:   
-date:       2018-1-1
+date:       2017-07-1
 author:     yunzhs
 header-img: img/Dyanna the Luna.jpg
 catalog: true

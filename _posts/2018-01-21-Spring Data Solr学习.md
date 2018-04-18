@@ -3,7 +3,7 @@ typora-root-url: ..
 typora-copy-images-to: ..\img\posts
 layout:     post
 title:      Solr的配置安装及知识整理
-date:       2018-1-6
+date:       2017-08-6
 author:     yunzhs
 header-img: img/Archer.jpg
 catalog: true

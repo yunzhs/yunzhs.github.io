@@ -2,7 +2,7 @@
 layout:     post
 title:      在IDEA配置mybatis接口代理idea Invalid bound statement (not found)
 subtitle:   
-date:       2017-12-19
+date:       2017-06-19
 author:     yunzhs
 header-img: img/Dyanna the Luna.jpg
 catalog: true
