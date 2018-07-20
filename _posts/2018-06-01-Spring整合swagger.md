@@ -3,7 +3,7 @@ layout:     post
 title:      SpringBoot整合Swagger2
 date:       2018-06-01
 author:     yunzhs
-header-img: img/Fate of Princess.jpg
+header-img: img/post-bg-rwd.jpg
 catalog: true
 tags:
     - SpringBoot
