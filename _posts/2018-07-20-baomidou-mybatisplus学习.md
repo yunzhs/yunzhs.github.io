@@ -289,3 +289,196 @@ public class GeneratorServiceEntity {
 }
 ```
 
+## 五.条件构造器
+
+- 翻页查询
+
+```
+public Page<T> selectPage(Page<T> page, EntityWrapper<T> entityWrapper) {
+  if (null != entityWrapper) {
+      entityWrapper.orderBy(page.getOrderByField(), page.isAsc());
+  }
+  page.setRecords(baseMapper.selectPage(page, entityWrapper));
+  return page;
+}
+```
+
+- 拼接 sql 方式 一
+
+```
+@Test
+public void testTSQL11() {
+    /*
+     * 实体带查询使用方法  输出看结果
+     */
+    EntityWrapper<User> ew = new EntityWrapper<User>();
+    ew.setEntity(new User(1));
+    ew.where("user_name={0}", "'zhangsan'").and("id=1")
+            .orNew("user_status={0}", "0").or("status=1")
+            .notLike("user_nickname", "notvalue")
+            .andNew("new=xx").like("hhh", "ddd")
+            .andNew("pwd=11").isNotNull("n1,n2").isNull("n3")
+            .groupBy("x1").groupBy("x2,x3")
+            .having("x1=11").having("x3=433")
+            .orderBy("dd").orderBy("d1,d2");
+    System.out.println(ew.getSqlSegment());
+}
+```
+
+- 拼接 sql 方法二
+
+```
+int buyCount = selectCount(Condition.create()
+                .setSqlSelect("sum(quantity)")
+                .isNull("order_id")
+                .eq("user_id", 1)
+                .eq("type", 1)
+                .in("status", new Integer[]{0, 1})
+                .eq("product_id", 1)
+                .between("created_time", startDate, currentDate)
+                .eq("weal", 1));
+```
+
+ 	此方法直接在impl层实现即可,不需到mapper层进行写入,由MP进行封装查询.
+
+​	 Condition（与EW类似） 来让用户自由的构建查询条件，简单便捷，没有额外的负担，能够有效提高开发效率。 
+
+一个合适的实现类方式
+
+```
+@Service
+public class OrderInfoServiceImpl extends ServiceImpl<OrderInfoMapper, OrderInfo> implements IOrderInfoService {
+```
+
+
+
+- 自定义 SQL 方法如何使用 Wrapper
+
+mapper java 接口方法
+
+```
+List<User> selectMyPage(RowBounds rowBounds, @Param("ew") Wrapper<T> wrapper);
+```
+
+mapper xml 定义
+
+```
+<select id="selectMyPage" resultType="User">
+  SELECT * FROM user 
+  <where>
+  ${ew.sqlSegment}
+  </where>
+</select>
+```
+
+### 条件参数说明
+
+| 查询方式     | 说明                              |
+| ------------ | --------------------------------- |
+| setSqlSelect | 设置 SELECT 查询字段              |
+| where        | WHERE 语句，拼接 + `WHERE 条件`   |
+| and          | AND 语句，拼接 + `AND 字段=值`    |
+| andNew       | AND 语句，拼接 + `AND (字段=值)`  |
+| or           | OR 语句，拼接 + `OR 字段=值`      |
+| orNew        | OR 语句，拼接 + `OR (字段=值)`    |
+| eq           | 等于=                             |
+| allEq        | 基于 map 内容等于=                |
+| ne           | 不等于<>                          |
+| gt           | 大于>                             |
+| ge           | 大于等于>=                        |
+| lt           | 小于<                             |
+| le           | 小于等于<=                        |
+| like         | 模糊查询 LIKE                     |
+| notLike      | 模糊查询 NOT LIKE                 |
+| in           | IN 查询                           |
+| notIn        | NOT IN 查询                       |
+| isNull       | NULL 值查询                       |
+| isNotNull    | IS NOT NULL                       |
+| groupBy      | 分组 GROUP BY                     |
+| having       | HAVING 关键词                     |
+| orderBy      | 排序 ORDER BY                     |
+| orderAsc     | ASC 排序 ORDER BY                 |
+| orderDesc    | DESC 排序 ORDER BY                |
+| exists       | EXISTS 条件语句                   |
+| notExists    | NOT EXISTS 条件语句               |
+| between      | BETWEEN 条件语句                  |
+| notBetween   | NOT BETWEEN 条件语句              |
+| addFilter    | 自由拼接 SQL                      |
+| last         | 拼接在最后，例如：last("LIMIT 1") |
+
+## 六.分页
+
+- UserMapper.java 方法内容
+
+```
+public interface UserMapper{//可以继承或者不继承BaseMapper
+    /**
+     * <p>
+     * 查询 : 根据state状态查询用户列表，分页显示
+     * </p>
+     *
+     * @param page
+     *            翻页对象，可以作为 xml 参数直接使用，传递参数 Page 即自动分页
+     * @param state
+     *            状态
+     * @return
+     */
+    List<User> selectUserList(Pagination page, Integer state);
+}
+```
+
+- UserServiceImpl.java 调用翻页方法，需要 page.setRecords 回传给页面
+
+```
+public Page<User> selectUserPage(Page<User> page, Integer state) {
+    // 不进行 count sql 优化，解决 MP 无法自动优化 SQL 问题
+    // page.setOptimizeCountSql(false);
+    // 不查询总记录数
+    // page.setSearchCount(false);
+    // 注意！！ 分页 total 是经过插件自动 回写 到传入 page 对象
+    return page.setRecords(userMapper.selectUserList(page, state));
+}
+```
+
+- UserMapper.xml 等同于编写一个普通 list 查询，mybatis-plus 自动替你分页
+
+```
+<select id="selectUserList" resultType="User">
+    SELECT * FROM user WHERE state=#{state}
+</select>
+```
+
+- 一个获取page属性的工具类,需要存在session里取
+
+```
+public class PageFactory<T> {
+
+    public Page<T> defaultPage() {
+        HttpServletRequest request = HttpKit.getRequest();
+        int limit = Integer.valueOf(request.getParameter("limit"));     //每页多少条数据
+        int offset = Integer.valueOf(request.getParameter("offset"));   //每页的偏移量(本页当前有多少条)
+        String sort = request.getParameter("sort");         //排序字段名称
+        String order = request.getParameter("order");       //asc或desc(升序或降序)
+        if (ToolUtil.isEmpty(sort)) {
+            Page<T> page = new Page<>((offset / limit + 1), limit);
+            page.setOpenSort(false);
+            return page;
+        } else {
+            Page<T> page = new Page<>((offset / limit + 1), limit, sort);
+            if (Order.ASC.getDes().equals(order)) {
+                page.setAsc(true);
+            } else {
+                page.setAsc(false);
+            }
+            return page;
+        }
+    }
+}
+```
+
+controller
+
+```
+        Page<OperationLog> page = new PageFactory<OperationLog>().defaultPage();
+```
+
