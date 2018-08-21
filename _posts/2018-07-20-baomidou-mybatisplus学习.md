@@ -78,6 +78,8 @@ result = user.insert();
 user.setAge(18);
 result = user.updateById();
 
+//t1,t2指相应的继承了iservice的类
+
 // 查询 User
 User exampleUser = t1.selectById();
 

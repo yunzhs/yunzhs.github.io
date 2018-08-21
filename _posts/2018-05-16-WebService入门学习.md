@@ -51,15 +51,21 @@ XML提供了一种可用于不同的平台和编程语言之间的语言。
 
 ![1526453805801](/img/posts/1526453805801.png)
 
-### 5.根据wsdl文档生成一段代码
+### 5.创建客户端
 
-![1526455521942](/img/posts/1526455521942.png)
+![1534749626382](/img/posts/1534749626382.png)
 
+输入客户端项目名，finish即可，项目创建成功会自动跳出如下界面，手动可以右键项目–>webService–>Generate Java Code From Wsdl 即可 
 
+![1534749667056](/img/posts/1534749667056.png)
 
-在文档目录中是这样的:
+```
+//随便从项目中找的一段测试类
+SaleTicketServiceServiceLocator locator = new SaleTicketServiceServiceLocator();
+SaleTicketService service = locator.getSaleTicketServicePort();
+String lineInfo = service.getPlanInfo("1");
+System.out.println(lineInfo);
+```
 
-![1526454088500](/img/posts/1526454088500.png)
-
-![1526456033799](/img/posts/1526456033799.png)
+然后客服端会自动给我们生产一段测试代码,接下来我们只需要将服务端用tomcat启动,就能把它作为一个完整的项目来进行开发了.
 
