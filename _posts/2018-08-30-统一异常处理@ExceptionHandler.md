@@ -27,13 +27,13 @@ public void processMethod(MissingServletRequestParameterException ex,HttpServlet
     }
 ```
 
-如果当前类发生MissingServletRequestParameterException异常时,就会自动执行该方法,但是我们不可能为每个controller都去专门的创建这样的类,这样太过于繁琐,因此我们使用@ControllerAdvice 注解
+如果当前类发生MissingServletRequestParameterException异常时,就会自动执行该方法,但是我们不可能为每个controller都去专门的创建这样的方法,这样太过于繁琐,因此我们使用@ControllerAdvice 注解,来创建一个单独的异常处理类.
 
 ## @ControllerAdvice注解 
 
 @ControllerAdvice，是Spring3.2提供的新注解，从名字上可以看出大体意思是控制器增强。 
 
-主要的用处就是定义@ExceptionHandler后,可以适用于所有的@RequestMapping注解的方法.
+主要的用处就是定义@ExceptionHandler后,带有@RequestMapping注解的方法上都会拦截.
 
   ```
 @ControllerAdvice
