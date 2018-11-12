@@ -2,8 +2,8 @@
 typora-root-url: ..
 typora-copy-images-to: ..\img\posts
 layout:     post
-title:      Solr的配置安装及知识整理
-date:       2017-08-6
+title:      Spring Data Solr学习
+date:       2017-08-06
 author:     yunzhs
 header-img: img/Archer.jpg
 catalog: true
