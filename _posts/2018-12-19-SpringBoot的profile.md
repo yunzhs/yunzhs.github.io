@@ -39,16 +39,6 @@ spring:
     password: database
     db-name: database #用来搜集数据库的所有表
     filters: wall,mergeStat
-constant:
-  dlj-url: http://xx.xxx.xx.52:8xx1
-eureka:
-  instance:
-    prefer-ip-address: true
-    instance-id: ${spring.cloud.client.ip-address}:${server.port}
-  client:
-    service-url:
-#          defaultZone: http://xx.xxx.xx.136:5438/eureka,http://xx.xxx.xx.137:5438/eureka,http://xx.xxx.xx.138:5438/eureka
-          defaultZone: http://c371501xx61-2:5438/eureka,http://c371501xx61-3:5438/eureka,http://c371501xx61-4:5438/eureka
   redis:
     database: 8
     jedis:
@@ -61,7 +51,18 @@ eureka:
     password: Dkjkjkl17K8NOnP
     sentinel:
       master: mymaster
-      nodes: xx.xxx.xx.11:9098,xx.xxx.xx.12:9098
+      nodes: xx.xxx.xx.11:9098,xx.xxx.xx.12:9098    
+constant:
+  dlj-url: http://xx.xxx.xx.52:8xx1
+eureka:
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.client.ip-address}:${server.port}
+  client:
+    service-url:
+#          defaultZone: http://xx.xxx.xx.136:5438/eureka,http://xx.xxx.xx.137:5438/eureka,http://xx.xxx.xx.138:5438/eureka
+          defaultZone: http://c371501xx61-2:5438/eureka,http://c371501xx61-3:5438/eureka,http://c371501xx61-4:5438/eureka
+
 
       
 spring:
