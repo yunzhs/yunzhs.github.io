@@ -35,7 +35,7 @@ public void processMethod(MissingServletRequestParameterException ex,HttpServlet
 
 主要的用处就是定义@ExceptionHandler后,带有@RequestMapping注解的方法上都会拦截.
 
-  ```
+  ```java
 @ControllerAdvice
 @Order(-1)
 public class GlobalExceptionHandler {
