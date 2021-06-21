@@ -43,6 +43,7 @@ import com.jcraft.jsch.Session;
 
 import java.util.Properties;
 
+@Component
 public class SSHConnection {
 
 //    private final static String S_PATH_FILE_PRIVATE_KEY = "/Users/hdwang/.ssh/id_rsa";
