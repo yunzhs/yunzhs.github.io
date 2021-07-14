@@ -5,12 +5,12 @@ typora-copy-images-to: ../img/posts
 
 ![image-20210622145510809](/img/posts/image-20210622145510809.png)
 
+```sql
 SELECT 
 CABIN_LV_NAME,
 GROUP_CONCAT(bunkrange order by CAST(left(bunkrange,3) as SIGNED) ) as bunkrange,
 SUM(sum) as sum
-FROM
-(
+FROM(
 SELECT
 CABIN_LV_NAME,
 CASE START_VALUE
@@ -55,4 +55,5 @@ bunkrange asc
  )s
  GROUP BY CABIN_LV_NAME
   ORDER BY FIELD(CABIN_LV_NAME,'座席','四等','三等','三等B','三等A','二等B','二等A','一等','特等') DESC
+```
 
