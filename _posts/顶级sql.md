@@ -10,7 +10,7 @@ SELECT
 CABIN_LV_NAME,
 GROUP_CONCAT(bunkrange order by CAST(left(bunkrange,3) as SIGNED) ) as bunkrange,
 SUM(sum) as sum
-FROM(
+	FROM(
 SELECT
 CABIN_LV_NAME,
 CASE START_VALUE
