@@ -1,6 +1,6 @@
 ---
 typora-root-url: ..
-typora-copy-images-to: ../img/posts	
+typora-copy-images-to: ../img/posts
 ---
 
 ![image-20210622145510809](/img/posts/image-20210622145510809.png)
