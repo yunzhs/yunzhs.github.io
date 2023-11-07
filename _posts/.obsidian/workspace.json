@@ -8,43 +8,18 @@
         "type": "tabs",
         "children": [
           {
-            "id": "38938520b0f99b88",
+            "id": "346b217fbc8bb625",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Java8 stream相关.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "89aff53f53e86384",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "2021面试知识整理(1).md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "e9cb2b2e9ba40ce5",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "分毫系统的特点，难点.md",
+                "file": "2022年面试.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -73,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "虚读",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -98,7 +73,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -118,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "分毫系统的特点，难点.md",
+                "file": "2022年面试.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -135,7 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "分毫系统的特点，难点.md",
+                "file": "2022年面试.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -158,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "分毫系统的特点，难点.md"
+                "file": "2022年面试.md"
               }
             }
           }
@@ -180,32 +156,39 @@
       "markdown-importer:打开 Markdown 格式转换器": false
     }
   },
-  "active": "e9cb2b2e9ba40ce5",
+  "active": "346b217fbc8bb625",
   "lastOpenFiles": [
+    "2020前归档/2017-12-17-SQL数据库小tips整理.md",
+    "2022年面试.md",
+    "2021面试知识整理.md",
+    "2020前归档/2011-01-01-开始整理面试.md",
+    "2017-06-17.md",
+    "分毫系统的特点，难点.md",
+    "sql-关于范式.md",
+    "动态代理的实现方式.md",
+    "k8s基本知识.md",
+    "线程池相关.md",
+    "归档说明.md",
+    "Interceptor拦截器的使用.md",
+    "maven排除冲突记录.md",
+    "随笔.md",
+    "小知识点-九月.md",
+    "io相关的知识点.md",
+    "动态账单技术方案(初稿).md",
     "AOP切面应用.md",
-    "2021面试知识整理(1).md",
+    "JVM虚拟机概念梳理.md",
+    "sql优化相关.md",
+    "小知识点-八月.md",
+    "2021面试知识整理 (2).md",
+    "2023.4激活windows和office记录.md",
+    "Java8 stream相关.md",
     "img/posts/image-20210723112304981.png",
     "img/posts/快速排序.jpeg",
     "img/posts/mysql执行流程图.png",
-    "sql优化相关.md",
     "新建文件夹",
     "北京野生动物园总结.md",
     "2023年四川旅游行程花费及总结.md",
-    "随笔.md",
-    "动态代理的实现方式.md",
-    "小知识点-九月.md",
-    "sql-关于范式.md",
-    "JVM参数相关.md",
-    "动态生成账单excel.md",
-    "顶级sql.md",
-    "2023.4电脑更换主板经验记录（重重劫难）.md",
-    "分毫系统的特点，难点.md",
-    "单元测试相关.md",
-    "img/posts/mysql执行流程图.png.md",
-    "k8s基本知识.md",
-    "Java8 stream相关.md",
     "img/posts/Pasted image 20231103142230.png",
-    "Users/gengyiwei/笔记/博客/yunzhs.github.io/img/posts/image-20220211151043319.png.md",
     "Users/gengyiwei/笔记/博客/yunzhs.github.io/img/posts",
     "Users/gengyiwei/笔记/博客/yunzhs.github.io/img",
     "Users/gengyiwei/笔记/博客/yunzhs.github.io",
@@ -213,16 +196,10 @@
     "Users/gengyiwei/笔记",
     "Users/gengyiwei",
     "Users",
-    "51社保归档/社保公共框架.md",
     "51社保归档",
-    "2023.4激活windows和office记录.md",
-    "51社保归档/堡垒机使用说明.md",
-    "2023年招聘随笔.md",
     "img/posts/Pasted image 20231022174633.png",
     "img/posts/2023-11-02 155656.jpg",
     "img/posts/Pasted image 20231102154907.png",
-    "小知识点-八月.md",
-    "Interceptor拦截器的使用.md",
     "img/posts/Pasted image 20231023112450.png",
     "img/posts/Pasted image 20231023112307.png",
     "img/posts/Pasted image 20231023112257.png",
