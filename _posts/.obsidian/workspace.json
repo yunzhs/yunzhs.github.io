@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "d6c869cf0937037d",
+        "id": "231e3b625d6866d3",
         "type": "tabs",
         "children": [
           {
-            "id": "91541fe5196a3a52",
+            "id": "38938520b0f99b88",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "面试——Java锁相关.md",
+                "file": "面试——2023年整理.md",
                 "mode": "source",
                 "source": false
               }
@@ -48,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "数据穿透",
+                "query": "cg",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -62,14 +62,6 @@
             "type": "leaf",
             "state": {
               "type": "starred",
-              "state": {}
-            }
-          },
-          {
-            "id": "e6edd80032dd4382",
-            "type": "leaf",
-            "state": {
-              "type": "bookmarks",
               "state": {}
             }
           }
@@ -93,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "面试——Java锁相关.md",
+                "file": "面试——2023年整理.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "面试——Java锁相关.md",
+                "file": "面试——2023年整理.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "面试——Java锁相关.md"
+                "file": "面试——2023年整理.md"
               }
             }
           }
@@ -146,49 +138,47 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "markdown-importer:打开 Markdown 格式转换器": false,
       "switcher:打开快速切换": false,
       "graph:查看关系图谱": false,
       "canvas:新建白板": false,
       "daily-notes:打开/创建今天的日记": false,
       "templates:插入模板": false,
-      "command-palette:打开命令面板": false,
-      "markdown-importer:打开 Markdown 格式转换器": false
+      "command-palette:打开命令面板": false
     }
   },
-  "active": "91541fe5196a3a52",
+  "active": "38938520b0f99b88",
   "lastOpenFiles": [
+    "面试——Java锁相关.md",
     "面试——线程池相关.md",
-    "面试——2021知识整理.md",
     "面试——2023年整理.md",
     "面试——分毫系统的特点，难点.md",
-    "2023年招聘随笔.md",
-    "面试——Java锁相关.md",
-    "JVM虚拟机概念梳理（面试专用）.md",
     "io相关的知识点.md",
-    "未命名.md",
-    "2020前归档/2017-12-17-java面试基础.md",
-    "2020前归档/2017-12-17-SQL数据库小tips整理.md",
-    "2020前归档/2017-12-17-java的设计模式.md",
-    "2020前归档/2018-09-25-八九月份遇到的一些小知识点.md",
-    "2020前归档/2011-01-01-开始整理面试.md",
-    "k8s基本知识.md",
-    "2023.4电脑更换主板经验记录（重重劫难）.md",
-    "2023.4激活windows和office记录.md",
-    "Interceptor拦截器的使用.md",
-    "maven排除冲突记录.md",
-    "随笔.md",
+    "2023年招聘随笔.md",
+    "面试——2021知识整理.md",
     "归档说明.md",
+    "2023.4激活windows和office记录.md",
+    "2023.4电脑更换主板经验记录（重重劫难）.md",
+    "分毫系统的特点，难点（面试专用）.md",
     "img/posts/image-20210727155308057.png.md",
-    "小知识点-八月.md",
-    "动态账单技术方案(初稿).md",
     "img/posts/Pasted image 20231107161653.png",
-    "2017-06-17.md",
-    "分毫系统的特点，难点.md",
-    "img/posts/image-20210723112304981.png",
+    "JVM虚拟机概念梳理（面试专用）.md",
+    "2022年面试.md",
     "img/posts/快速排序.jpeg",
+    "2021面试知识整理(1).md",
     "img/posts/mysql执行流程图.png",
-    "新建文件夹",
+    "img/posts/image-20210723112304981.png",
+    "2021面试知识整理.md",
+    "img/12.5.png.md",
+    "2020前归档/2017-12-15-jekyll报错整理.md",
+    "2020前归档/2017-12-12-shell命令收集.md",
+    "单元测试相关.md",
+    "北京野生动物园总结.md",
+    "k8s基本知识.md",
     "img/posts/Pasted image 20231103142230.png",
+    "img/posts/Pasted image 20231102154907.png",
+    "img/posts/2023-11-02 155656.jpg",
+    "Users/gengyiwei/笔记/博客/yunzhs.github.io/img/posts/image-20220211151043319.png.md",
     "Users/gengyiwei/笔记/博客/yunzhs.github.io/img/posts",
     "Users/gengyiwei/笔记/博客/yunzhs.github.io/img",
     "Users/gengyiwei/笔记/博客/yunzhs.github.io",
@@ -196,12 +186,13 @@
     "Users/gengyiwei/笔记",
     "Users/gengyiwei",
     "Users",
+    "51社保归档/社保公共框架.md",
+    "51社保归档/提测流程.md",
+    "51社保归档/堡垒机使用说明.md",
     "51社保归档",
-    "img/posts/Pasted image 20231022174633.png",
-    "img/posts/2023-11-02 155656.jpg",
-    "img/posts/Pasted image 20231102154907.png",
     "img/posts/Pasted image 20231023112450.png",
     "img/posts/Pasted image 20231023112307.png",
+    "img/posts/Pasted image 20231023112257.png",
     "测试用工2.82023-0220230329184000835.pdf"
   ]
 }
