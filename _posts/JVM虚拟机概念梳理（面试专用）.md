@@ -216,7 +216,7 @@ MetaspaceSize参数，是元空间GC发生的最小阈值，他的阈值是在�
 （1）：dashboard命令查看总体jvm运行情况
 
 （2）：jvm显示jvm详细信息
-
+	·
 （3）：thread 显示jvm里面所有线程信息（类似于jstack）  查看死锁线程命令thread -b
 
 （4）：sc * 显示所有类（search class）
